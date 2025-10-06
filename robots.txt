@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://piece-of-cake.online/sitemap.xml
