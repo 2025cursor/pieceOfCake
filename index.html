@@ -9,6 +9,24 @@
       content="Explore Piece Of Cake Merge and Bake gameplay, upgrades, bilingual tips, and event plans at piece-of-cake.online to master merges and keep your bakery sharp."
     />
     <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Piece Of Cake Merge and Bake Guide | piece-of-cake.online" />
+    <meta
+      property="og:description"
+      content="Explore Piece Of Cake Merge and Bake gameplay, upgrades, bilingual tips, and event plans at piece-of-cake.online to master merges and keep your bakery sharp."
+    />
+    <meta property="og:url" content="https://piece-of-cake.online/" />
+    <meta property="og:site_name" content="piece-of-cake.online" />
+    <meta property="og:image" content="https://piece-of-cake.online/social-preview.jpg" />
+    <meta property="og:image:alt" content="Piece Of Cake Merge and Bake fan bakery overview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Piece Of Cake Merge and Bake Guide | piece-of-cake.online" />
+    <meta
+      name="twitter:description"
+      content="Explore Piece Of Cake Merge and Bake gameplay, upgrades, bilingual tips, and event plans at piece-of-cake.online to master merges and keep your bakery sharp."
+    />
+    <meta name="twitter:url" content="https://piece-of-cake.online/" />
+    <meta name="twitter:image" content="https://piece-of-cake.online/social-preview.jpg" />
     <link rel="canonical" href="https://piece-of-cake.online/" />
     <link rel="alternate" href="https://piece-of-cake.online/" hreflang="en" />
     <link rel="alternate" href="https://piece-of-cake.online/zh" hreflang="zh" />
@@ -60,14 +78,14 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content localized is-visible" data-lang-block="en">
-          <h1 id="hero-title">Piece Of Cake Merge and Bake Ultimate Strategy Guide</h1>
+          <h1 id="hero-title" class="hero-title">Piece Of Cake Merge and Bake Ultimate Strategy Guide</h1>
           <p>
             Unlock the sugar-fueled arcade loop of Piece Of Cake Merge and Bake while enjoying one-click access to the official CrazyGames build and an in-depth bilingual playbook.
           </p>
           <a class="cta" href="#play-now">Play Piece Of Cake Merge and Bake</a>
         </div>
         <div class="hero-content localized" data-lang-block="zh" lang="zh">
-          <h1>Piece Of Cake Merge and Bake 中文攻略入口</h1>
+          <h2 class="hero-title" role="heading" aria-level="1">Piece Of Cake Merge and Bake 中文攻略入口</h2>
           <p>
             一键体验 CrazyGames 官方 Piece Of Cake Merge and Bake，并浏览完整英文与中文的高分攻略、活动路线与养成建议。
           </p>
@@ -236,7 +254,7 @@
 
       <article class="guide localized" data-lang-block="zh" aria-label="Chinese strategy guide" lang="zh">
         <section id="zh-overview">
-          <h1>Piece Of Cake Merge and Bake 终极策略指南</h1>
+          <h2 class="zh-headline" role="heading" aria-level="1">Piece Of Cake Merge and Bake 终极策略指南</h2>
           <p>
             这里整合了 Piece Of Cake Merge and Bake 的官方网页版本、故事背景与成长路线，让中文玩家快速掌握糖霜世界的节奏与资源配置。
           </p>
@@ -441,7 +459,7 @@
         box-shadow: var(--shadow);
       }
 
-      .hero h1 {
+      .hero-title {
         font-size: clamp(1.8rem, 4vw, 2.6rem);
         margin-bottom: 1rem;
       }
@@ -527,6 +545,11 @@
 
       .guide h3 {
         margin-top: 1.5rem;
+      }
+
+      .zh-headline {
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+        margin-bottom: 1rem;
       }
 
       .guide p {
