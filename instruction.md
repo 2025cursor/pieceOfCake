@@ -1,23 +1,31 @@
+# Piece Of Cake Online Fan Guide Brief
 
-# 角色定义
-你现在的角色是一个前端开发专家 并兼顾ui 设置专家，能够给用户提供比较简单、好看的html+css+js页面。
+## Purpose
 
-# 主要功能
-1、我要做一个单页面的网站：网站的域名是piece-of-cake.online
-2、网站通过iframe嵌套游戏，游戏的源地址：https://games.crazygames.com/en_US/piece-of-cake-merge-and-bake/index.html?isNewUser=false
-3、提供游戏介绍：
-这个是youtube对应的视频介绍，也可以加上
-https://www.youtube.com/watch?v=X62e6XcroWY
+Build an independent, source-backed fan guide for *Piece of Cake: Merge and Bake* at `https://piece-of-cake.online/`. The site must clearly state that it is not affiliated with HG POINT LTD or CrazyGames.
 
-视频标题是：Piece Of Cake: Merge & Bake Gameplay Walkthrough Part 1 (iOS / Android) 
-YouTube
+## Game embed and source
 
+- Embed the CrazyGames-hosted game: `https://games.crazygames.com/en_US/piece-of-cake-merge-and-bake/index.html?isNewUser=false`
+- Credit the referenced YouTube walkthrough and link to its original page.
+- Use the public CrazyGames listing as the source for developer, platform, controls, and published gameplay facts.
+- Separate verified facts from independent strategy observations. Never invent mechanics, events, currencies, or account features.
 
-4、title、description不必须包含核心关键词。H1-H3包含核心关键词以及相关的长尾词 
-5、围绕关键词基于你搜集的东西，写一篇SEO的文章，英文的，字数800字。  
-6、保证页面的关键词密度大于3% 
-7、文章部分，我需要你也给我列出一个H1-H3的大纲 
-8、文章的话可以参考结构：what is、game feature、how to play 、faq
-9、语言的话，支持多语音：包含英文和中文
-10、包含google的robots.txt 和site-map.xml协议。
+## Languages
 
+Publish English, Simplified Chinese, and Spanish pages only when each translation has useful, readable content. Each page needs its own canonical URL, language metadata, and reciprocal hreflang links.
+
+## Editorial and trust requirements
+
+- Write for players first; do not target a fixed keyword density or word count.
+- Use original explanations, practical tables/checklists, source links, clear dates, and correction contact information.
+- Add visible About, Contact, Privacy, Terms, and Disclaimer pages.
+- Do not imply that the site, game embed, or video is official.
+- Use descriptive image alt text and only publish assets that exist at the referenced URL.
+
+## Technical requirements
+
+- Serve valid `robots.txt`, `sitemap.xml`, `ads.txt`, and `404.html` files.
+- Unknown paths and missing assets must return a real 404 response at the deployment host; they must not silently return the homepage.
+- Keep GA4 tracking limited to the configured property and document the analytics/privacy behavior.
+- Test mobile layout, iframe loading, internal links, canonical URLs, structured data, and Search Console URL inspection before deployment.

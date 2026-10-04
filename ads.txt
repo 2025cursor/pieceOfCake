@@ -1,0 +1,2 @@
+# Add the authorized-seller line supplied by your ad platform after approval.
+# Do not publish a guessed publisher ID.

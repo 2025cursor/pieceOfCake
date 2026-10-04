@@ -1,12 +1,4 @@
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
 User-agent: *
 Allow: /
+Disallow: /404.html
 Sitemap: https://piece-of-cake.online/sitemap.xml
