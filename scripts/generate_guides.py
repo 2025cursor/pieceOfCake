@@ -30,6 +30,9 @@ for item in DATA:
     slug = html.escape(item['slug'])
     body = item['body']
     intro = item['intro']
+    figure = ''
+    if item.get('image'):
+        figure = f'''<figure class="source-figure"><img src="{html.escape(item['image'])}" alt="{html.escape(item['image_alt'])}" loading="lazy" width="1280" height="675"><figcaption>Reference capture made during the 6 October 2026 review of the CrazyGames-hosted build. The game artwork belongs to its respective rights holders; this site uses the image to explain the public opening scene.</figcaption></figure>'''
     page = f'''<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,6 +71,7 @@ for item in DATA:
         <p class="guide-meta">Reviewed 6 October 2026 · Public mechanics are sourced; planning suggestions are editorial.</p>
         <p class="lead">{html.escape(intro)}</p>
         <div class="source-note"><strong>Source boundary:</strong> This guide uses the public <a href="https://www.crazygames.com/game/piece-of-cake-merge-and-bake" rel="noopener noreferrer nofollow">CrazyGames listing</a> for published facts. It does not claim hidden levels, fixed recipe values, offline progress, or features that the source does not confirm.</div>
+{figure}
         {body}
         <section aria-labelledby="related-title">
           <h2 id="related-title">Continue with a related guide</h2>

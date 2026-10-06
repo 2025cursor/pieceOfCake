@@ -9,7 +9,9 @@
       "merge-basics",
       "customer-orders",
       "cafe-restoration"
-    ]
+    ],
+    "image": "/assets/piece-of-cake-opening.png",
+    "image_alt": "Emily in the run-down family cafe during the opening scene of the CrazyGames-hosted Piece of Cake: Merge and Bake build"
   },
   {
     "slug": "merge-basics",
