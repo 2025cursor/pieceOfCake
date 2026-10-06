@@ -11,7 +11,8 @@
       "cafe-restoration"
     ],
     "image": "/assets/piece-of-cake-opening.png",
-    "image_alt": "Emily in the run-down family cafe during the opening scene of the CrazyGames-hosted Piece of Cake: Merge and Bake build"
+    "image_alt": "Emily in the run-down family cafe during the opening scene of the CrazyGames-hosted Piece of Cake: Merge and Bake build",
+    "editor_note": "Check whether the current opening screen still starts with the toast pan, then record the exact first order and the browser/device used."
   },
   {
     "slug": "merge-basics",
@@ -23,7 +24,8 @@
       "getting-started",
       "customer-orders",
       "board-space"
-    ]
+    ],
+    "editor_note": "Capture the accepted pair and the resulting item in your current build; do not copy a recipe sequence unless the screen confirms it."
   },
   {
     "slug": "customer-orders",
@@ -35,7 +37,8 @@
       "getting-started",
       "merge-basics",
       "cafe-restoration"
-    ]
+    ],
+    "editor_note": "Record one visible order, the item you delivered, and the reward or progress message that appeared after delivery."
   },
   {
     "slug": "cafe-restoration",
@@ -47,7 +50,8 @@
       "customer-orders",
       "getting-started",
       "boosters-and-missions"
-    ]
+    ],
+    "editor_note": "Write down the restoration option labels and the visible change you saw; costs and choices should be dated because they may change."
   },
   {
     "slug": "boosters-and-missions",
@@ -59,7 +63,8 @@
       "customer-orders",
       "merge-basics",
       "board-space"
-    ]
+    ],
+    "editor_note": "Copy the exact mission wording and booster instruction from the current screen before describing a result or duration."
   },
   {
     "slug": "board-space",
@@ -71,7 +76,8 @@
       "merge-basics",
       "getting-started",
       "boosters-and-missions"
-    ]
+    ],
+    "editor_note": "Note how many empty cells were visible when a move succeeded or failed; do not generalize one board layout to every version."
   },
   {
     "slug": "browser-controls",
@@ -83,6 +89,7 @@
       "getting-started",
       "merge-basics",
       "board-space"
-    ]
+    ],
+    "editor_note": "Record the browser, device orientation, and whether drag input worked; this makes device advice more useful than a generic compatibility claim."
   }
 ]
