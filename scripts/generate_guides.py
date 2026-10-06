@@ -38,7 +38,7 @@ for item in DATA:
 <html lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRDHEDT25W"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-GRDHEDT25W');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500}});gtag('js',new Date());gtag('config','G-GRDHEDT25W');</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{seo_title} | piece-of-cake.online</title>
@@ -73,7 +73,7 @@ for item in DATA:
         <p class="guide-meta">Reviewed 7 October 2026 · Maintained by Piece Of Cake Online Fan Guide · <a href="mailto:bigdata20182023@gmail.com">Contact the maintainer</a></p>
         <p class="lead">{html.escape(intro)}</p>
         <div class="source-note"><strong>Source boundary:</strong> This guide uses the public <a href="https://www.crazygames.com/game/piece-of-cake-merge-and-bake" rel="noopener noreferrer nofollow">CrazyGames listing</a> for published facts. It does not claim hidden levels, fixed recipe values, offline progress, or features that the source does not confirm.</div>
-        <div class="editor-note"><strong>Practical check:</strong> {editor_note}</div>
+        <div class="editor-note"><strong>Player checklist:</strong> {editor_note}</div>
 {figure}
         {body}
         <section aria-labelledby="related-title">
@@ -85,6 +85,7 @@ for item in DATA:
     </main>
     <footer class="site-footer"><p>© <span id="year"></span> Piece Of Cake Online Fan Guide.</p><nav class="footer-links" aria-label="Footer links"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></nav></footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="/site-consent.js" defer></script>
   </body>
 </html>
 '''
