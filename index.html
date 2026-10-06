@@ -48,7 +48,7 @@
   <body>
     <header class="site-header">
       <div class="branding">
-        <span class="brand-pill" aria-label="Piece Of Cake Online Fan Guide">
+        <a class="brand-pill" href="/" aria-label="Piece Of Cake Online Fan Guide">
           <svg class="brand-icon" width="26" height="26" viewBox="0 0 32 32" role="img" aria-labelledby="cake-icon-title">
             <title id="cake-icon-title">Cake icon</title>
             <path fill="#fdd36a" d="M4 18c0-3.3 2.7-6 6-6h12c3.3 0 6 2.7 6 6v7H4z" />
@@ -57,11 +57,15 @@
             <circle cx="11" cy="19" r="1.6" fill="#6335c7" /><circle cx="16" cy="19" r="1.6" fill="#6335c7" /><circle cx="21" cy="19" r="1.6" fill="#6335c7" />
           </svg>
           Piece Of Cake Fan Guide
-        </span>
+        </a>
         <p class="tagline">Independent notes for a merge-and-cafe game.</p>
       </div>
-      <nav class="language-toggle" aria-label="Language selector">
-        <a class="lang-link is-active" href="/">English</a>
+      <nav class="language-toggle site-nav" aria-label="Site navigation">
+        <a class="lang-link" href="/">Home</a>
+        <a class="lang-link" href="/guides/getting-started">Guides</a>
+        <a class="lang-link" href="/tools/merge-planner">Planner</a>
+        <a class="lang-link" href="#play-now">Play</a>
+        <a class="lang-link" href="/updates">Updates</a>
         <a class="lang-link" href="/zh/">中文</a>
         <a class="lang-link" href="/es/">Español</a>
       </nav>
@@ -75,16 +79,17 @@
           <p class="eyebrow">Independent fan guide</p>
           <h1 id="hero-title" class="hero-title">Piece of Cake: Merge and Bake Guide</h1>
           <p>Learn the basic merge loop, customer orders, cafe restoration, and practical board habits before you start playing the CrazyGames-hosted version.</p>
-          <a class="cta" href="/play">Play the game</a>
+          <a class="cta" href="#play-now">Play the game</a>
           <p class="byline">This site is an unofficial guide. It is not affiliated with HG POINT LTD or CrazyGames.</p>
           <p class="guide-meta">Source review: 6 October 2026 · Maintained independently · <a href="/about">How this guide is checked</a></p>
         </div>
         <div class="hero-media">
           <div class="game-launch-card">
-            <p class="eyebrow">Play separately</p>
-            <h2>Open the game on its source page</h2>
-            <p>The CrazyGames-hosted game is kept on a separate play page so this homepage can focus on independent guide content.</p>
-            <a class="cta" href="/play">Open the game</a>
+            <p class="eyebrow">Play on this page</p>
+            <h2>Start playing below</h2>
+            <p>The game is available directly on this homepage after the guide library. You can also open a larger standalone player.</p>
+            <a class="cta" href="#play-now">Jump to the game</a>
+            <a class="source-link" href="/play">Open the full-screen player</a>
             <p class="guide-meta">Third-party game page · not an official support channel</p>
           </div>
         </div>
@@ -135,6 +140,18 @@
         <div class="guide-card">
           <h3><a href="/tools/merge-planner">Open the merge planner</a></h3>
           <p>Record an order, count empty cells, and save a short session checklist in your browser.</p>
+        </div>
+      </section>
+
+      <section class="play-section" id="play-now" aria-labelledby="play-title">
+        <div class="play-section__intro">
+          <p class="eyebrow">Play on this page</p>
+          <h2 id="play-title">Piece of Cake: Merge and Bake</h2>
+          <p>This CrazyGames-hosted game is embedded for convenience. The guide content above remains independent editorial content, and the game is owned and operated by its respective rights holders.</p>
+          <a class="source-link" href="/play">Open the full-screen player and walkthrough</a>
+        </div>
+        <div class="iframe-wrapper game-frame">
+          <iframe src="https://games.crazygames.com/en_US/piece-of-cake-merge-and-bake/index.html?isNewUser=false" title="Play Piece of Cake: Merge and Bake on CrazyGames" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 

@@ -554,3 +554,21 @@ main {
 .source-figure img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: var(--shadow); }
 .source-figure figcaption { margin-top: 0.55rem; color: var(--muted); font-size: 0.86rem; }
 .update-list { display: grid; gap: 0.8rem; }
+.site-nav { flex-wrap: wrap; justify-content: flex-end; }
+.site-nav .lang-link { flex: 0 1 auto; }
+.play-section {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(99, 53, 199, 0.16);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.play-section__intro { display: grid; gap: 0.55rem; }
+.play-section__intro h2, .play-section__intro p { margin: 0; }
+.play-section__intro .eyebrow { margin: 0; }
+@media (max-width: 640px) {
+  .site-nav { justify-content: flex-start; gap: 0.4rem; }
+  .site-nav .lang-link { flex: 0 1 auto; padding: 0.45rem 0.75rem; font-size: 0.85rem; }
+}
