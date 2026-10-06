@@ -518,3 +518,7 @@ main {
   .site-nav { justify-content: flex-start; gap: 0.4rem; }
   .site-nav .lang-link { flex: 0 1 auto; padding: 0.45rem 0.75rem; font-size: 0.85rem; }
 }
+.site-header { position: sticky; top: 0; z-index: 20; }
+[id] { scroll-margin-top: 7rem; }
+.source-link { display: inline-flex; align-items: center; width: fit-content; padding: 0.58rem 1rem; border: 1px solid rgba(99, 53, 199, 0.4); border-radius: 999px; color: var(--accent-dark); font-weight: 700; text-decoration: none; background: rgba(255, 255, 255, 0.78); }
+.source-link:hover, .source-link:focus-visible { background: #eadfff; text-decoration: none; }
