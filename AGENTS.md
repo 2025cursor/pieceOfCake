@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-The repository targets a single-page marketing site that embeds the CrazyGames "Piece Of Cake" iframe and ships SEO content in English and Chinese. Keep `instruction.md` as the canonical product brief; sync with stakeholders before editing it. Place runtime assets in `src/`, keeping `src/index.html` as the entry point, `src/styles/` for modular CSS, `src/scripts/` for UI logic, and `src/content/` for localized article segments (Markdown or YAML). Generate crawl-facing files (`robots.txt`, `sitemap.xml`) into `public/`, and emit production bundles into `dist/`. Do not commit local preview caches or editor artefacts.
+The repository contains a source-backed English guide hub, a separate third-party play page, and supporting localized landing pages for the CrazyGames "Piece Of Cake" game. Keep `instruction.md` as the canonical product brief; sync with stakeholders before editing it. Place runtime assets in `src/`, keeping `src/index.html` as the entry point, `src/styles/` for modular CSS, `src/scripts/` for UI logic, and `src/content/` for structured guide content (JSON). Keep crawl-facing files (`robots.txt`, `sitemap.xml`) at the project root and generate static guide pages into `guides/`. Do not commit local preview caches or editor artefacts.
 
 ## Build, Test, and Development Commands
 Install dependencies once a `package.json` is present with `npm install`. Use a Vite workflow: `npm run dev` starts the hot-reload dev server, `npm run build` packs the static site into `dist/`, and `npm run preview` validates the production build locally. For a lightweight static check, `npx serve dist` will host the compiled assets. Always verify the iframe, language toggles, and SEO meta tags before pushing.
@@ -16,4 +16,4 @@ Add automated smoke tests with Playwright under `tests/e2e/` to confirm the ifra
 Adopt Conventional Commits (`feat: add zh SEO outline`) and reference issues in the footer (`Refs #12`). Pull requests must outline scope, list tests performed, and attach desktop + mobile screenshots of the hero section. Include Lighthouse scores when performance shifts. Keep PRs under roughly 400 changed lines; split larger efforts.
 
 ## SEO & Content Workflow
-Maintain keyword density (≥3%) by editing the structured article outlines in `src/content/`. Update English and Chinese variants together and include publication dates in front matter so the sitemap stays current. When embedding new media, confirm it is lazy-loaded and captioned for both locales.
+Maintain people-first, source-backed content in `src/content/` and generated `guides/` pages; do not target a fixed keyword density. Keep update dates and source links accurate, and keep third-party media lazy-loaded and clearly credited.

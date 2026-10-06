@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRDHEDT25W"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GRDHEDT25W');</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Merge Planner for Piece of Cake | piece-of-cake.online</title>
+    <meta name="description" content="A simple browser-only merge planner for Piece of Cake: Merge and Bake. Record an order, empty cells, and a session checklist without sending data to a server." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://piece-of-cake.online/tools/merge-planner" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"Piece of Cake Merge Planner",
+      "url":"https://piece-of-cake.online/tools/merge-planner",
+      "applicationCategory":"GameApplication",
+      "operatingSystem":"Web browser",
+      "description":"A browser-only checklist and space planner for an independent Piece of Cake: Merge and Bake fan guide.",
+      "isPartOf":{"@type":"WebSite","name":"Piece Of Cake Online Fan Guide","url":"https://piece-of-cake.online/"}
+    }</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="branding"><span class="brand-pill">🍰 Piece Of Cake Fan Guide</span><p class="tagline">A small planning tool for a merge board.</p></div>
+      <nav class="language-toggle" aria-label="Language selector"><a class="lang-link is-active" href="/">English</a><a class="lang-link" href="/zh/">中文</a><a class="lang-link" href="/es/">Español</a></nav>
+    </header>
+    <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Merge planner</span></li></ol></nav>
+      <article class="guide legal-page">
+        <p class="eyebrow">Browser-only tool</p>
+        <h1>Piece of Cake: Merge and Bake Merge Planner</h1>
+        <p>Use this lightweight checklist to write down the current customer order, count empty cells, and decide whether the next generated item has enough room. It does not connect to the game and does not claim to know hidden item costs or levels.</p>
+        <div class="tool-panel">
+          <div class="tool-grid">
+            <div class="tool-field"><label for="order">Current order or goal</label><input id="order" type="text" placeholder="Example: prepare the next requested sandwich" autocomplete="off" /></div>
+            <div class="tool-field"><label for="empty-cells">Empty cells</label><input id="empty-cells" type="number" min="0" max="99" value="3" inputmode="numeric" /></div>
+            <div class="tool-field"><label for="next-action">Next action</label><select id="next-action"><option value="merge">Merge an obvious matching pair</option><option value="order">Work toward the visible order</option><option value="clear">Clear low-value duplicates first</option><option value="wait">Pause and inspect the board</option></select></div>
+          </div>
+          <div class="tool-field"><label for="notes">Session notes</label><textarea id="notes" rows="4" placeholder="What worked? Which item or order blocked the board?"></textarea></div>
+          <div class="tool-actions"><button class="tool-button" id="save" type="button">Save on this device</button><button class="tool-button secondary" id="reset" type="button">Reset</button></div>
+          <div class="tool-result" id="result" role="status" aria-live="polite">Enter the board state to get a planning reminder.</div>
+        </div>
+        <h2>How to use the planner</h2>
+        <ol class="step-list"><li>Read the current order before generating another item.</li><li>Count empty cells and leave a small buffer when possible.</li><li>Choose one next action instead of merging every duplicate immediately.</li><li>Save a note after a blocked session so your next attempt starts with evidence.</li></ol>
+        <h2>Privacy and limitations</h2>
+        <p>Your entries are saved only in this browser's local storage when you press “Save on this device”. This tool does not send the order, notes, or board count to our server. The suggestions are general planning prompts, not official game rules. For verified mechanics and sources, read the <a href="/guides/merge-basics">merge basics guide</a> and the <a href="https://www.crazygames.com/game/piece-of-cake-merge-and-bake" rel="noopener noreferrer nofollow">CrazyGames listing</a>.</p>
+        <p><a href="/">Return to the main guide</a></p>
+      </article>
+    </main>
+    <footer class="site-footer"><p>© <span id="year"></span> Piece Of Cake Online Fan Guide.</p><nav class="footer-links" aria-label="Footer links"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></nav></footer>
+    <script>
+      const key = 'piece-of-cake-merge-planner-v1';
+      const order = document.getElementById('order');
+      const cells = document.getElementById('empty-cells');
+      const action = document.getElementById('next-action');
+      const notes = document.getElementById('notes');
+      const result = document.getElementById('result');
+      const saved = JSON.parse(localStorage.getItem(key) || 'null');
+      if (saved) { order.value = saved.order || ''; cells.value = saved.cells ?? 3; action.value = saved.action || 'merge'; notes.value = saved.notes || ''; }
+      function update() {
+        const count = Number(cells.value);
+        const space = Number.isFinite(count) ? count : 0;
+        let message = space <= 0 ? 'The board is full. Inspect an order and clear or merge something before generating another item.' : space === 1 ? 'Only one empty cell remains. Avoid producing another item unless it directly serves the current order.' : 'You have some working space. Re-read the order, then make one deliberate move.';
+        result.textContent = order.value.trim() ? `${message} Current note: ${order.value.trim()}.` : message;
+      }
+      document.getElementById('save').addEventListener('click', () => { localStorage.setItem(key, JSON.stringify({order: order.value, cells: cells.value, action: action.value, notes: notes.value})); update(); result.textContent += ' Saved locally on this device.'; });
+      document.getElementById('reset').addEventListener('click', () => { localStorage.removeItem(key); order.value=''; cells.value=3; action.value='merge'; notes.value=''; update(); });
+      [order, cells, action, notes].forEach((el) => el.addEventListener('input', update));
+      document.getElementById('year').textContent = new Date().getFullYear(); update();
+    </script>
+  </body>
+</html>

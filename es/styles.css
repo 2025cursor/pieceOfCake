@@ -467,3 +467,100 @@ main {
     border-bottom: 0;
   }
 }
+
+/* Guide library and lightweight planning tool */
+.guide-library {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(99, 53, 199, 0.14);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(26, 9, 59, 0.06);
+}
+.guide-card h3 { margin: 0; font-size: 1.08rem; }
+.guide-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.guide-card a { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
+.guide-card a:hover { text-decoration: underline; }
+.source-note {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(247, 242, 255, 0.75);
+  color: var(--muted);
+}
+.guide-meta { color: var(--muted); font-size: 0.9rem; }
+.tool-panel {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(99, 53, 199, 0.16);
+  border-radius: 20px;
+  background: #fffaf0;
+}
+.tool-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.tool-field { display: grid; gap: 0.35rem; }
+.tool-field label { font-weight: 700; }
+.tool-field input,
+.tool-field textarea,
+.tool-field select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(99, 53, 199, 0.25);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+.tool-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.tool-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  background: var(--accent-dark);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tool-button.secondary { background: #eadfff; color: var(--accent-dark); }
+.tool-result {
+  min-height: 2.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+}
+.checklist { display: grid; gap: 0.55rem; padding: 0; list-style: none; }
+.checklist label { display: flex; gap: 0.6rem; align-items: flex-start; }
+.checklist input { margin-top: 0.35rem; }
+@media (max-width: 640px) {
+  .hero-media { order: 2; }
+}
+.related-links { display: grid; gap: 0.55rem; padding-left: 1.25rem; }
+.related-links a { color: var(--accent-dark); font-weight: 650; }
+.guide .lead { font-size: 1.12rem; color: var(--text); }
+.game-launch-card {
+  display: grid;
+  gap: 0.8rem;
+  min-height: 300px;
+  align-content: center;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid rgba(99, 53, 199, 0.18);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff4fa, #f0eaff);
+  box-shadow: var(--shadow);
+}
+.game-launch-card h2 { margin: 0; }
+.game-launch-card p { margin: 0; }
+.play-frame { margin-top: 1.5rem; }
