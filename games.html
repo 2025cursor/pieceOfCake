@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>More Browser Games | piece-of-cake.online</title>
+    <meta name="description" content="Open third-party browser game pages for Super Mario and the official Tetris game from one independent game hub." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://piece-of-cake.online/games" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="branding"><a class="brand-pill" href="/">🍰 Piece Of Cake Fan Guide</a><p class="tagline">Additional browser game links.</p></div>
+      <nav class="language-toggle" aria-label="Site navigation"><a class="lang-link" href="/">Home</a><a class="lang-link is-active" href="/games">More games</a></nav>
+    </header>
+    <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">More games</span></li></ol></nav>
+      <article class="guide">
+        <p class="eyebrow">Separate game hub</p>
+        <h1>More browser games</h1>
+        <p>This page collects two external game sources in one place. The game frames are operated by their respective sites; this independent website does not own, publish, or provide official support for these games.</p>
+        <div class="notice"><strong>Copyright and source notice:</strong> Super Mario and Tetris names, artwork, and game content belong to their respective rights holders. Use the source links below for the original context. This page is not part of the AdSense-indexed guide content.</div>
+
+        <section class="game-card" aria-labelledby="mario-title">
+          <div class="game-card__header"><div><p class="eyebrow">Third-party source</p><h2 id="mario-title">Super Mario browser game</h2></div><a class="source-link" href="https://supermarioplay.com/" target="_blank" rel="noopener noreferrer nofollow">Open source site</a></div>
+          <p>The embedded source uses the Mario game frame currently published by SuperMarioPlay. It is loaded from that site and may change or stop allowing embeds without notice.</p>
+          <div class="external-game-card">
+            <p><strong>The source blocks cross-site embedding.</strong> Its response uses <code>X-Frame-Options: SAMEORIGIN</code>, so the game can only be framed by SuperMarioPlay itself.</p>
+            <a class="cta" href="https://supermarioplay.com/" target="_blank" rel="noopener noreferrer nofollow">Open Super Mario on the source site</a>
+          </div>
+          <p class="game-card__note">The source page uses <code>/game/mario.html?v=1.0.11</code> internally. Nintendo trademarks and game rights remain with Nintendo and other rights holders.</p>
+        </section>
+
+        <section class="game-card" aria-labelledby="tetris-title">
+          <div class="game-card__header"><div><p class="eyebrow">Official source link</p><h2 id="tetris-title">Tetris</h2></div><a class="source-link" href="https://play.tetris.com/" target="_blank" rel="noopener noreferrer nofollow">Open official Tetris</a></div>
+          <p>This is the official Tetris web-play destination. If the provider changes its embedding policy, use the source button above instead of relying on the frame.</p>
+          <div class="iframe-wrapper game-frame"><iframe src="https://play.tetris.com/" title="Official Tetris web game" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <p class="game-card__note">Source: <code>play.tetris.com</code>. Tetris is a trademark of Tetris Holding.</p>
+        </section>
+
+        <p><a class="cta" href="/">Return to the Piece Of Cake guide</a></p>
+      </article>
+    </main>
+    <footer class="site-footer"><p>© <span id="year"></span> Piece Of Cake Online Fan Guide.</p><nav class="footer-links" aria-label="Footer links"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></nav></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
