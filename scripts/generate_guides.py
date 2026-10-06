@@ -53,6 +53,7 @@ for item in DATA:
       "description":{json.dumps(item['description'])},
       "url":"https://piece-of-cake.online/guides/{slug}",
       "dateModified":"2026-10-06",
+      "author":{{"@type":"Organization","name":"Piece Of Cake Online Fan Guide","email":"bigdata20182023@gmail.com"}},
       "inLanguage":"en",
       "isPartOf":{{"@type":"WebSite","name":"Piece Of Cake Online Fan Guide","url":"https://piece-of-cake.online/"}},
       "about":{{"@type":"VideoGame","name":"Piece of Cake: Merge and Bake"}}
@@ -68,7 +69,7 @@ for item in DATA:
       <article class="guide" aria-label="{title}">
         <p class="eyebrow">Independent guide</p>
         <h1>{title}</h1>
-        <p class="guide-meta">Reviewed 6 October 2026 · Public mechanics are sourced; planning suggestions are editorial.</p>
+        <p class="guide-meta">Reviewed 6 October 2026 · Maintained by Piece Of Cake Online Fan Guide · <a href="mailto:bigdata20182023@gmail.com">Contact the maintainer</a></p>
         <p class="lead">{html.escape(intro)}</p>
         <div class="source-note"><strong>Source boundary:</strong> This guide uses the public <a href="https://www.crazygames.com/game/piece-of-cake-merge-and-bake" rel="noopener noreferrer nofollow">CrazyGames listing</a> for published facts. It does not claim hidden levels, fixed recipe values, offline progress, or features that the source does not confirm.</div>
 {figure}
