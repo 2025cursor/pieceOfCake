@@ -13,7 +13,6 @@ ALIASES = {
     "/disclaimer": "/disclaimer.html",
     "/play": "/play.html",
     "/updates": "/updates.html",
-    "/games": "/games.html",
     "/tools/merge-planner": "/tools/merge-planner.html",
 }
 for path in (ROOT / "guides").glob("*.html"):
