@@ -20,6 +20,16 @@
   if (saved === 'granted') setConsent(true);
   if (saved === 'denied') setConsent(false);
 
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-open-consent]');
+    if (!trigger) return;
+    try { window.localStorage.removeItem(STORAGE_KEY); } catch (error) {}
+    saved = null;
+    var existing = document.querySelector('.consent-banner');
+    if (existing) existing.remove();
+    render();
+  });
+
   function render() {
     if (typeof window.gtag !== 'function') return;
     if (saved === 'granted' || saved === 'denied' || document.querySelector('.consent-banner')) return;

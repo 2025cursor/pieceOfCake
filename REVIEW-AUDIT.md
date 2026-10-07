@@ -81,3 +81,17 @@ Evidence:
 ## Approval boundary
 
 These passes improve readiness but cannot guarantee AdSense approval. Before adding ad code, replace the site-level preference with a Google-certified CMP where required, add the exact authorized seller line supplied by AdSense, and add additional dated first-hand gameplay observations and screenshots when available. The current site does not claim that those user-specific observations exist.
+
+## Post-audit fixes applied before this release candidate
+
+The follow-up audit identified and fixed the following release blockers:
+
+- Added `?v=20261007-2` to mutable CSS and consent-script URLs to prevent HTML/CSS cache mixing.
+- Changed the guide collection to the canonical `/guides/` route and updated Sitemap/nav links accordingly.
+- Corrected the stale update-log wording so it describes the current inline homepage player and `/play` fallback.
+- Added resilient Planner storage handling for corrupted or unavailable local storage.
+- Added a persistent “Privacy choices” control and localized the consent prompt for Chinese and Spanish pages.
+- Removed thin legal utility pages from the search sitemap and removed noindex locale links from the primary nav.
+- Kept the homepage direct player, source boundary, full-screen fallback, and no guessed AdSense publisher ID.
+
+The remaining approval-dependent items are deliberately not fabricated: a real maintainer identity, dated first-hand gameplay records/screenshots, and a Google-certified CMP before advertising.
