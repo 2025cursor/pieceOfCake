@@ -95,3 +95,13 @@ The follow-up audit identified and fixed the following release blockers:
 - Kept the homepage direct player, source boundary, full-screen fallback, and no guessed AdSense publisher ID.
 
 The remaining approval-dependent items are deliberately not fabricated: a real maintainer identity, dated first-hand gameplay records/screenshots, and a Google-certified CMP before advertising.
+
+## Final live verification after `cd069cd`
+
+Verified on `https://piece-of-cake.online/` after deployment:
+
+- Homepage, `/guides/`, every listed guide, Planner, Play, Updates, legal pages, and language routes returned HTTP 200; a random unknown route returned 404.
+- Sitemap contains 11 intended indexable URLs; each returned 200 and its canonical matched the Sitemap URL. `/guides/` now uses the final trailing-slash URL.
+- HTML loads `/styles.css?v=20261007-2` and `/site-consent.js?v=20261007-2`, preventing the earlier four-hour stale-asset mix.
+- Fresh browser computed `scroll-margin-top: 112px`, found the inline homepage iframe, shared navigation, Privacy choices control, and consent buttons.
+- `ads.txt` remains intentionally comment-only before AdSense approval.
